@@ -1,0 +1,27 @@
+.main{
+    background: url(../img/image-bg.jpg) top center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    text-align: center;
+    font-family: Roboto, serif;
+}
+
+.title{
+    text-align: center;
+    margin: 200px 0px 40px 0;
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.block {
+    display: inline-block;
+    border: 1px solid white;
+    padding: 15px;
+    margin: 50px 15px;
+
+}
+

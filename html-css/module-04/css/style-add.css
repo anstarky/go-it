@@ -1,0 +1,179 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+
+    background: url(../img/bg-additional.jpg) top center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.container h2 {
+    font-size: 48px;
+    color: rgb(81, 81, 81);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.container h2::after {
+    display: block;
+    content:'';
+    border-bottom: 7px solid rgb(26, 188, 156);
+    width: 165px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.task {
+    margin-bottom: 40px;
+    padding: 20px 0;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    text-align: center;
+}
+
+.task:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+}
+
+/* Task 1 */
+.menu {
+    display: inline-block;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li {
+    float: left;
+    text-transform: uppercase;
+    list-style: none;
+    margin: 0 50px;
+    font-weight: 700;
+}
+
+.menu li a {
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: rgb(26, 188, 156);
+}
+
+/* Task 2 */
+.list {
+    display: inline-block;
+    list-style: none;
+    color: #0E1116;
+    margin: 0;
+    padding: 0;
+}
+
+.list-item {
+    float: left;
+    margin: 0 15px;
+    padding: 10px 15px;
+    font-weight: 500;
+}
+
+.list-item:nth-child(3n+1) {
+    background-color: #88292F;
+}
+
+.list-item:nth-child(3n+2) {
+    background-color: #5DB7DE;
+}
+
+.list-item:nth-child(3n+3) {
+    background-color: #0D5D56;
+}
+
+/* Task 3 */
+.task3 .list-item::before {
+    content:'\2192    ';
+}
+
+/* Task 4 */
+
+.list-04 {
+	counter-reset: article-count; /* Создаем счетчик */
+    list-style: none;
+    margin: 0 20px;
+    padding: 0;
+    display: inline-block;
+}
+
+.list-04-item {
+    float: left;
+    width: 370px;
+}
+
+.list-04-item:not(:last-child) {
+    padding-right: 20px;
+}
+
+.article {
+    text-align: left;
+}
+
+.article-head {
+    display: inline-block;
+    text-align: center;
+}
+
+.article-title {
+    font-size: 24px;
+    float: left;
+    margin: 0;
+}
+
+.article-title::before {
+	counter-increment: article-count; /* Увеличиваем значение счетчика */
+	content: counter(article-count, upper-roman); /* Возвращаем текущее значение счетчика */
+
+	width: 40px;
+	height: 40px;
+    display:inline-block;
+    margin-right: 10px;
+
+	font-size: 20px;
+	color: #ffffff;
+	line-height: 40px;
+
+	background-color: rgb(26, 188, 156);
+}
+
+.article-text {
+    line-height: 1.5;
+    text-align: justify;
+}

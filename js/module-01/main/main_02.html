@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 01 - Задание 2</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 2</h2>
+					<p>
+						На счету пользователя есть <code>23580</code> кредитов,
+						значение хранится в переменной
+						<code>credits</code> (создай и присвой). Пользователь
+						решает купить ремонтных дроидов, которые стоят по
+						<code>3000</code> кредитов за штуку. Цена одного дроида
+						хранится в переменной <code>pricePerDroid</code> (создай
+						и присвой).
+					</p>
+					<p>
+						При посещении страницы, используя <code>prompt</code>,
+						необходимо спросить количество дроидов которые
+						пользователь хочет купить и сохранить в переменную.
+					</p>
+					<p>Напиши скрипт который:</p>
+					<ul>
+						<li>
+							Если в <code>prompt</code> была нажата
+							<code>Cancel</code>, выводит в консоль сообщение
+							<code>'Отменено пользователем!'</code>.
+						</li>
+						<li>
+							В противном случае, рассчитывает общую цену заказа и
+							сохраняет в переменной <code>totalPrice</code>.
+						</li>
+						<li>
+							Проверяет сможет ли пользователь оплатить заказ:
+							<ul>
+								<li>
+									если сумма к оплате превышает количество
+									кредитов на счету, выводи в консоль
+									сообщение
+									<code>'Недостаточно средств на счету!'</code
+									>.
+								</li>
+								<li>
+									в противном случае необходимо посчитать
+									остаток кредитов на счету и вывести
+									сообщение
+									<code
+										>'Вы купили [число] дроидов, на счету
+										осталось [число] кредитов.'</code
+									>.
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</section>
+			</div>
+		</main>
+		<script src="../js/main_02.js"></script>
+	</body>
+</html>

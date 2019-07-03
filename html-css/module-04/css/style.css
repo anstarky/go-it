@@ -1,0 +1,200 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 14px;
+    line-height: 21px;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header */
+.header {
+    padding: 25px 15px 0;
+    font-family: "Open Sans";
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.logo {
+    float: left;
+}
+
+.menu {
+    float: right;
+    margin: 0;
+    padding: 0;
+    margin-top: -12px;
+}
+
+.menu li {
+    float: left;
+    text-transform: uppercase;
+    list-style: none;
+    margin:0 15px;
+}
+
+.menu li:last-child {
+    margin:0 0 0 15px;
+}
+
+.menu li a {
+    color: black;
+    text-decoration: none;
+}
+
+.menu a:hover,
+.menu a:focus {
+    color: rgb(26, 188, 156);
+}
+
+/* Main */
+.container h2 {
+    font-size: 48px;
+    color: rgb(81, 81, 81);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+    padding-top: 105px;
+    margin: 0;
+    margin-bottom: 78px;
+}
+
+.container h2::after {
+    display: block;
+    content:'';
+    border-bottom: 7px solid rgb(26, 188, 156);
+    width: 165px;
+    margin: 0 auto;
+    padding-top: 38px;
+}
+
+
+/* Section Products */
+.card {
+    box-sizing: content-box;
+    width: 255px;
+    padding: 15px;
+    font-size: 14px;
+    float: left;
+}
+
+.card-img {
+    height: 282px;
+    overflow: hidden;
+}
+
+.card-title {
+    margin: 0;
+    padding: 0;
+    width: 255px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: white;
+}
+
+.card span {
+    box-sizing: border-box;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.card:hover .name {
+    background-color: rgb(26, 188, 156);
+}
+
+.card:hover .prise {
+    background-color: #7fd9c7;
+}
+
+.name {
+    width: 200px;
+    padding: 15px;
+    background-color: rgb(50, 50, 50);
+}
+
+.prise {
+    float: right;
+    width: 55px;
+    text-align: center;
+    background-color: #8c8c8c;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+/* Section News */
+.news {
+    margin-bottom: 45px;
+}
+
+.news ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+}
+
+.news ul li {
+    float:left;
+    list-style: none;
+    width: 350px;
+    font-family: "OpenSans", sans-serif;
+    color: rgb(85, 82, 82);
+    padding: 0 15px;
+}
+
+.news h3 {
+    margin: 0;
+    font-size: 18px;
+    padding: 10px 0 25px 0;
+}
+
+.news h3::after {
+    display: block;
+    content:'';
+    border-bottom: 3px solid rgb(26, 188, 156);
+    font-size: 18px;
+    width: 130px;
+    padding-bottom: 11px;
+}
+
+.news p {
+    font-size: 14px;
+    margin: 0;
+}
+
+.news a {
+    float:left;
+    font-size: 16px;
+    color: white;
+    background-color: rgb(26, 188, 156);
+    text-align: center;
+    padding: 15px 40px;
+    text-decoration: none;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 15px 0 0px 0;
+}

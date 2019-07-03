@@ -1,0 +1,42 @@
+.main {
+    width: 780px;
+    margin: 0 auto;
+
+    background: url(../img/bg-additional.jpg) top center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    font-family: Roboto;
+}
+
+.main h1 {
+    text-align: center;
+    color: #bc0a0a;
+}
+
+.main h2 {
+    color: #bc0a0a;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #bc0a0a;
+}
+
+.main img {
+    padding-right: 25px;
+}
+
+.main a {
+    color: #bc0a0a;
+}
+
+.left {
+    float: left;
+    width: 380px;
+    padding-right: 20px;
+}
+
+.right {
+    float: left;
+    width: 380px;
+}

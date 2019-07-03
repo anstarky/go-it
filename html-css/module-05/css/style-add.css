@@ -1,0 +1,221 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+
+    background: url(../img/bg-additional.jpg) top center no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.container h2 {
+    font-size: 48px;
+    color: rgb(81, 81, 81);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.container h2::after {
+    display: block;
+    content:'';
+    border-bottom: 7px solid rgb(26, 188, 156);
+    width: 165px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.task {
+    margin-bottom: 40px;
+    padding: 40px 0 60px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    text-align: center;
+}
+.task a {
+    text-decoration: none;
+}
+
+.task:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+
+/* Tasl 1 */
+.task-1 {
+    height: 100vh;
+    background: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ), url(../img/bg-additional-1.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.task-1 h2 {
+    margin: 0;
+    padding: 10px;;
+    color: #fff;
+    text-align: center;
+}
+
+/* Task 2 */
+.boxes {
+    --b: 400px;
+    width: var(--b);
+    height: var(--b);
+    background-color: #424242;
+    margin: auto;
+    border:30px solid #fff;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14),0 1px 5px 0 rgba(0,0,0,.12),0 3px 1px -2px rgba(0,0,0,.2);
+    box-sizing: content-box;
+}
+
+.boxes-list {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+.box {
+    position: absolute;
+    list-style: none;
+    --b1: 100px;
+    width: var(--b1);
+    height: var(--b1);
+    background-color: #fff;
+    /* margin: 25px; */
+}
+
+.box:nth-child(1) {
+    background-color: #2ea2f3;
+}
+
+.box:nth-child(2) {
+    background-color: #199586;
+    left: 150px;
+}
+
+.box:nth-child(3) {
+    background-color: #e62365;
+    left: 300px;
+}
+
+.box:nth-child(4) {
+    background-color: #f1483d;
+    top: 150px;
+}
+
+.box:nth-child(5) {
+    background-color: #fc5b2d;
+    top: 150px;
+    left: 150px;
+}
+
+.box:nth-child(6) {
+    background-color: #9b12ae;
+    top: 150px;
+    left: 300px;
+}
+
+.box:nth-child(7) {
+    background-color: #4db051;
+    top: 300px;
+}
+
+.box:nth-child(8) {
+    background-color: #fcef41;
+    top: 300px;
+    left: 150px;
+}
+
+.box:nth-child(9) {
+    background-color: #398ef2;
+    top: 300px;
+    left: 300px;
+}
+/* Task 3 */
+
+.task-3 {
+    height: 400px;
+}
+
+.menu {
+    list-style: none;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.submenu {
+    margin: 0;
+    padding: 0;
+}
+
+  .menu-item {
+    position: relative;
+    display: inline-block;
+  }
+
+  .menu-item > a,
+  .submenu-item > a {
+    display: inline-block;
+    color: white;
+    background-color: #199586;
+    text-decoration: none;
+  }
+
+.menu-link {
+    padding: 10px 38px;
+}
+
+.submenu-link {
+    padding: 10px 25px;
+}
+
+  .menu-item > a:hover,
+  .submenu-item > a:hover{
+    background: white;
+    color: #199586;
+  }
+
+  .submenu {
+    /* делаем невидимым .submenu */
+    display: none;
+    /* при появлении .submenu окажется поверх других элементов */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    list-style: none;
+    /* background-color: blue; */
+    box-shadow: 0 2px 2px 2px rgba(0, 0, 0, 0.3);
+  }
+
+  /* делаем .submenu видимым */
+  .menu-item:hover > .submenu {
+    display: block;
+  }

@@ -1,0 +1,128 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+
+    background: url(../img/bg-additional.jpg) top center no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.container h2 {
+    font-size: 48px;
+    color: rgb(81, 81, 81);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.container h2::after {
+    display: block;
+    content:'';
+    border-bottom: 7px solid rgb(26, 188, 156);
+    width: 165px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.task {
+    margin-bottom: 40px;
+    padding: 40px 0 60px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.task:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+
+/* Task 1 */
+.gallary {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallary-item {
+    flex-basis: 340px;
+    flex-grow: 1;
+    margin: 25px 25px 0 0;
+}
+
+.gallary-item:nth-child(3n+1) {
+    margin-left: 25px;
+}
+
+/* Task 2 */
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width: 390px;
+    margin: auto;
+    padding: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 1), 0 10px 10px rgba(0, 0, 0, 0.22);
+    transform: rotate(5deg);
+    transition: all .2s;
+}
+
+.card-title {
+    margin-top: 50px;
+    text-transform: uppercase;
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 40px;
+}
+
+.card-title:hover {
+    font-size: calc(40px + 15%);
+    color: orangered;
+    transition: font-size .2s, color .3s;
+}
+
+.card-desc{
+    text-align: justify;
+}
+
+.card-btn {
+    background-color:#db203f;
+    text-transform: uppercase;
+    border: 0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    padding: 5px 0;
+    font-family: 'Baloo Chettan', cursive;
+    font-size: 24px;
+    color: #fff;
+    cursor: pointer;
+    width: 100px;
+}
+
+.card-btn:hover {
+    width: 100%;
+    background-color: #f86300;
+    transition: all 2s;
+}

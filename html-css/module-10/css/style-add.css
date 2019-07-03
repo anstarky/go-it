@@ -1,0 +1,100 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto", serif;
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+
+    background: url(../img/bg-additional.jpg) top center no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.container h2 {
+    font-size: 48px;
+    color: rgb(81, 81, 81);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 700;
+}
+
+.container h2::after {
+    display: block;
+    content:'';
+    border-bottom: 7px solid rgb(26, 188, 156);
+    width: 165px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.task {
+    margin-bottom: 40px;
+    padding: 40px 0 60px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.task:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+
+/* Task 1 */
+.picture-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* Task 2 */
+.picture {
+    width: 400px;
+    height: 200px;
+    background: url('https://placeimg.com/400/200/nature') no-repeat;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .picture {
+      background: url('https://placeimg.com/800/400/nature') no-repeat;
+    }
+  }
+
+/* Task 3 */
+.task3 {
+    margin: 20px auto;
+    width: 90%;
+    font-size: 24px;
+}
+
+pre {
+    background-color: #272822;
+    padding: 1em;
+    margin: 1.5em 0;
+    overflow: auto;
+    border-radius: .3em;
+    color: #f8f8f2;
+    font-family: "Roboto", serif;
+
+}
+
+xmp {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    color: #f8f8f2;
+    line-height: 1.4;
+}

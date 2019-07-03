@@ -1,0 +1,148 @@
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto";
+    font-size: 17px;
+    line-height: 21px;
+    margin: 0;
+    padding: 0;
+
+    background: url(../img/bg-additional.jpg) top center no-repeat;
+    background-size: cover;
+
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.container h2 {
+    font-size: 48px;
+    color: rgb(81, 81, 81);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.container h2::after {
+    display: block;
+    content:'';
+    border-bottom: 7px solid rgb(26, 188, 156);
+    width: 165px;
+    margin: 0 auto;
+    padding-top: 40px;
+}
+
+.task {    
+    margin-bottom: 40px;
+    padding: 40px 0 60px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.task:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+    cursor: pointer;
+}
+
+/* Task 1 */
+h3 {
+    font-size: 30px;
+    font-weight: normal;
+}
+.table {
+    display: inline-block;
+    border-collapse: collapse;
+    font-size: 20px;
+}
+
+th {
+ background-color: #444;
+ color: #fff;
+}
+
+tr,td {
+    border: 2px solid #444;
+}
+
+th,td {
+    height: 50px;
+    padding: 10px;
+}
+
+.col-1 {
+    text-align: left;
+    text-transform: uppercase;
+}
+
+/* Task 2 */
+.form {
+    margin: auto;
+    width: 415px;
+}
+
+.input-text,
+.input-textarea {
+    width: 100%;
+    margin: 15px;
+    padding: 27px 20px;
+}
+
+.input-text::placeholder,
+.input-textarea::placeholder {
+    font-family: "Roboto", serif;
+    font-size: 16px;
+    color: #000;
+}
+
+.input-text {
+    height: 50px;
+}
+
+.input-textarea {
+    height: 225px;
+}
+
+.input-button {
+    text-transform: uppercase;
+    font-size: 18px;
+    border: 0;
+    background-color: #E76262;
+    color: #fff;
+    padding: 20px 60px;
+    font-weight: 700;
+    margin: 20px;
+}
+
+.input-text:focus:invalid,
+.input-textarea:focus:invalid {
+  outline-color: red;
+  transition: outline-color 5s;
+}
+
+.input-text:focus:valid,
+.input-textarea:focus:valid {
+  outline-color: green;
+  transition: outline-color .4s;
+}
+
+.input-text,
+.input-textarea {
+  box-sizing: border-box;
+  margin: 14px 0;
+  width: 455px;
+  display: block;
+  outline: 1px solid transparent;
+  outline-offset: -2px;
+  transition: outline-color 0.1s;
+}

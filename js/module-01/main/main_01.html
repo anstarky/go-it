@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 01 - Задание 1</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 1</h2>
+					<p>
+						Напиши скрипт имитирующий авторизацию администратора в
+						панели управления.
+					</p>
+					<p>
+						Есть переменная <code>message</code> в которую будет
+						записано сообщение о результате. При загрузке страницы у
+						посетителя запрашивается пароль через
+						<code>prompt</code>:
+					</p>
+					<ul>
+						<li>
+							Если нажали <code>Cancel</code>, записать в
+							<code>message</code> строку
+							<code>'Отменено пользователем!'</code>
+						</li>
+						<li>
+							В протовном случае, если введен пароль который
+							совпадает со значением константы
+							<code>ADMIN_PASSWORD</code>, записать в
+							<code>message</code> строку
+							<code>'Добро пожаловать!'</code>
+						</li>
+						<li>
+							В противном случае, то есть если ни одно из
+							предыдущих условий не выполнилось, записать в
+							<code>message</code> строку
+							<code>'Доступ запрещен, неверный пароль!'</code>
+						</li>
+						<li>
+							После всех проверок вывести в
+							<code>alert</code> значение переменной
+							<code>message</code>.
+						</li>
+					</ul>
+				</section>
+			</div>
+		</main>
+		<script src="../js/main_01.js"></script>
+	</body>
+</html>
