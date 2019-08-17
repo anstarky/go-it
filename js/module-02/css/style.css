@@ -109,3 +109,30 @@ code {
 }
 
 /* --- END: All Task --- */
+
+/* --- CSS Code --- */
+
+pre {
+    background-color: #f7f7f7;
+    padding: 0 15px;
+    margin-top: 30px;
+}
+
+.hljs-keyword {
+    color: #8959a8;
+}
+
+.hljs-string {
+    color: #718c00;
+}
+
+.hljs-params,
+.hljs-number {
+    color: #f5871f;
+}
+
+.hljs-comment {
+    color: #8e908c;
+}
+
+/* --- END: CSS Code --- */

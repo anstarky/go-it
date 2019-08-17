@@ -43,7 +43,9 @@ switch (country) {
     messageNo = 'В вашей стране доставка не доступна!';
 }
 
+
 country = country.charAt(0).toUpperCase() + country.substr(1).toLowerCase();
+
 messageYes = `Доставка в ${country} будет стоить ${credit} кредитов`;
 
 if (messageNo === null) {

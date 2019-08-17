@@ -16,5 +16,10 @@ for (let i = 0; i < arrayWord.length; i += 1) {
   }
 }
 
+// Можно посчитать при помощи тернарного оператора
+// for (let i = 0; i < arrayWord.length; i += i) {
+//   longestWord = longestWord.length > arrayWord[i].length ? longestWord : arrayWord[i];
+// }
+
 console.log('Исходная строка:', message);
 console.log('Самое длинное слово в строке:', longestWord); // 'force'

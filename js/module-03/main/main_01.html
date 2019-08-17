@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 03 - Задание 1</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../css/style.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 1</h2>
+					<p>
+						Есть массив <code>logins</code> с логинами
+						пользователей. Напиши скрипт добавления логина в массив
+						<code>logins</code>. Добавляемый логин должен:
+					</p>
+					<ul>
+						<li>
+							проходить проверку на длину от 4 до 16-ти символов
+							включительно
+						</li>
+						<li>
+							быть уникален, то есть отсутствовать в массиве
+							<code>logins</code>
+						</li>
+					</ul>
+					<p>Разбей задачу на подзадачи с помощью функций.</p>
+					<p>
+						Напиши функцию <code>isLoginValid(login)</code>, в
+						которой проверь количество символов параметра
+						<code>login</code> и верни <code>true</code> или
+						<code>false</code> в зависимости от того, попадает ли
+						длина параметра в заданный диапазон от 4-х до 16-ти
+						символов включительно.
+					</p>
+					<p>
+						Напиши функцию
+						<code>isLoginUnique(allLogins, login)</code>, которая
+						принимает список всех логинов и добавляемый логин как
+						параметры и проверяет наличие <code>login</code> в
+						массиве <code>allLogins</code>, возвращая
+						<code>true</code> если такого логина еще нет и
+						<code>false</code> если логин уже используется.
+					</p>
+					<p>
+						Напиши функцию
+						<code>addLogin(allLogins, login)</code> которая:
+					</p>
+					<ul>
+						<li>
+							Принимает новый логин и массив всех логинов как
+							параметры
+						</li>
+						<li>
+							Проверяет валидность логина используя
+							вспомогательную функцию <code>isLoginValid</code>
+						</li>
+						<li>
+							Если логин не валиден, прекратить исполнение функции
+							<code>addLogin</code> и вернуть строку
+							<code
+								>'Ошибка! Логин должен быть от 4 до 16
+								символов'</code
+							>
+						</li>
+						<li>
+							Если логин валиден, функция
+							<code>addLogin</code> проверяеть уникальность логина
+							с помощью функции <code>isLoginUnique</code>
+						</li>
+						<li>
+							Если <code>isLoginUnique</code> вернет
+							<code>false</code>, тогда <code>addLogin</code> не
+							добавляет логин в массив и возвращает строку
+							<code>'Такой логин уже используется!'</code>
+						</li>
+						<li>
+							Если <code>isLoginUnique</code> вернет
+							<code>true</code>, <code>addLogin</code> добавляет
+							новый логин в <code>logins</code> и возвращает
+							строку <code>'Логин успешно добавлен!'</code>
+						</li>
+					</ul>
+					<p>
+						🔔
+						<strong
+							>Принцип единственной ответственности
+							функции</strong
+						>
+						- каждая функция делает что-то одно. Это позволяет
+						переиспользовать код и изменять логику работы функции
+						только в одном месте, не затрагивая работу программы в
+						целом.
+					</p>
+					<p>
+						Предикатные функции возвращают только
+						<code>true</code> или <code>false</code>. Такие функции
+						принято называть начиная с <code>is</code>:
+						<code>isLoginUnique</code> и <code>isLoginValid</code> в
+						нашем случае.
+					</p>
+					<ul>
+						<li>
+							<code>isLoginUnique</code> только проверяет есть ли
+							такой логин в массиве и возвращает
+							<code>true</code> или <code>false</code>.
+						</li>
+						<li>
+							<code>isLoginValid</code> только проверяет валидный
+							ли логин и возвращает <code>true</code> или
+							<code>false</code>.
+						</li>
+						<li>
+							<code>addLogin</code> добавляет или не добавляет
+							логин в массив. При этом для проверок условия
+							добавления использует результаты вызовов других
+							функций - <code>isLoginUnique</code> и
+							<code>isLoginValid</code>.
+						</li>
+					</ul>
+					<pre><code>
+<span class="hljs-keyword">const</span> logins = [<span class="hljs-string">'Mango'</span>, <span class="hljs-string">'robotGoogles'</span>, <span class="hljs-string">'Poly'</span>, <span class="hljs-string">'Aj4x1sBozz'</span>, <span class="hljs-string">'qwerty123'</span>];
+
+<span class="hljs-keyword">const</span> isLoginValid = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">login</span>) </span>{
+	<span class="hljs-comment">// код</span>
+};
+
+<span class="hljs-keyword">const</span> isLoginUnique = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">allLogins, login</span>) </span>{
+	<span class="hljs-comment">// код</span>
+};
+
+<span class="hljs-keyword">const</span> addLogin = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params">allLogins, login</span>) </span>{
+	<span class="hljs-comment">// код</span>
+};
+
+<span class="hljs-comment">// Вызовы функции для проверки</span>
+addLogin(logins, <span class="hljs-string">'Ajax'</span>); <span class="hljs-comment">// 'Логин успешно добавлен!'</span>
+addLogin(logins, <span class="hljs-string">'robotGoogles'</span>); <span class="hljs-comment">// 'Такой логин уже используется!'</span>
+addLogin(logins, <span class="hljs-string">'Zod'</span>); <span class="hljs-comment">// 'Ошибка! Логин должен быть от 4 до 16 символов'</span>
+addLogin(logins, <span class="hljs-string">'jqueryisextremelyfast'</span>); <span class="hljs-comment">// 'Ошибка! Логин должен быть от 4 до 16 символов'</span>
+					</code></pre>
+				</section>
+			</div>
+		</main>
+		<script src="../js/main_01.js"></script>
+	</body>
+</html>
