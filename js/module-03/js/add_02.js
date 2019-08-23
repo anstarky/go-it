@@ -8,7 +8,7 @@
     возвращает укороченную версию.
 */
 
-/*
+/* Альтернативный вариант
 function formatString(str) {
   if (str.length > 40) {
     str = `${str.slice(0, 40)  }...`;

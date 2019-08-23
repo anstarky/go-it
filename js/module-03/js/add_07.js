@@ -1,3 +1,4 @@
+/* eslint-disable no-restricted-syntax */
 /*
   Есть массив уникальных чисел uniqueNumbers.
 
@@ -12,7 +13,7 @@ const uniqueNumbers = [2, 1, 4, 9];
 const addUniqueNumbers = function unique() {
   const NewArr = [];
 
-  for (element of arguments) {
+  for (const element of arguments) {
     if (!uniqueNumbers.includes(element)) {
       uniqueNumbers.push(element);
     }
@@ -20,51 +21,6 @@ const addUniqueNumbers = function unique() {
 
   return NewArr;
 };
-
-/* Код не работает!!
-
-const addUniqueNumbers = function () {
-  const args = Array.from(arguments);
-
-  for (let j = 0; j < args.length; j += i) {
-    for (let i = 0; i < uniqueNumbers.length; i += i) {
-      if (args[j] != uniqueNumbers[i]) {
-        uniqueNumbers.push(args[j]);
-      }
-    }
-  }
-
-  return uniqueNumbers;
-};
-*/
-
-/* Код не работает!!
-
-const addUniqueNumbers = function name() {
-  for (const argument of arguments) {
-    for (const argument2 of uniqueNumbers) {
-      if (argument !== argument2) {
-        uniqueNumbers.push(argument);
-      }
-    }
-  }
-  return uniqueNumbers;
-};
-*/
-
-/* Код не работает!!
-
-const addUniqueNumbers = function () {
-  for (const argument of arguments) {
-    for (let i = 0; i < uniqueNumbers.length; i += i) {
-      if (argument != uniqueNumbers[i]) {
-        uniqueNumbers.push(argument);
-      }
-    }
-  }
-  return uniqueNumbers;
-};
-*/
 
 // Вызовы функции для проверки
 addUniqueNumbers(1, 2, 3);

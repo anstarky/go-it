@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 04 - Дополнительное задание 6</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../css/style-add.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 6</h2>
+					<pre>
+                		<code class="text">
+
+	Напиши функцию getAllPropValues(arr, prop),
+	которая получает массив объектов и имя ключа.
+	Возвращает массив значений определенного поля prop
+	из каждого объекта в массиве
+
+
+	const users = [
+	{ name: 'Poly', age: 7, mood: 'happy' },
+	{ name: 'Mango', age: 4, mood: 'blissful'},
+	{ name: 'Ajax', age: 3, mood: 'tired' }
+	];
+
+	// Вызовы функции для проверки
+	console.log(
+	getAllPropValues(users, 'name')
+	); // ['Poly', 'Mango', 'Ajax']
+
+	console.log(
+	getAllPropValues(users, 'mood')
+	); // ['happy', 'blissful', 'tired']
+
+	console.log(
+	getAllPropValues(users, 'active')
+	); // []
+						</code>
+            		</pre>
+				</section>
+			</div>
+		</main>
+		<script src="../js/add_06.js"></script>
+	</body>
+</html>

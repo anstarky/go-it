@@ -8,7 +8,7 @@
   Если была передана не строка, функция возвращает null.
 */
 
-/*
+/* Альтернативный вариант
 function getPx(str) {
   if (typeof str === 'string') {
     str = Number.parseFloat(str);

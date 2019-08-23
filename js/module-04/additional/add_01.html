@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Модуль 03 - Дополнительное задание 1</title>
+		<title>Модуль 04 - Дополнительное задание 1</title>
 		<link
 			rel="stylesheet"
 			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,18 +20,24 @@
 					<h2 class="title">Задание 1</h2>
 					<pre>
                 <code class="text">
-Напиши функцию checkNumberType(num).
 
-Функция получает число num как аргумент и возвращает строку "Even" если число четное и строку "Odd" если не четное.
+	Напиши скрипт, который, для объекта user, последовательно:
 
-// Вызовы функции для проверки
-console.log( checkNumberType(2) ); // 'Even'
+		- добавляет поле mood со значением 'happy'
+		- заменяет значение hobby на 'javascript'
+		- заменяет значение premium на false
+		- выводит содержимое объекта user в формате ключ:значение 
+		используя Object.keys и for...of
+		- выводит содержимое объекта user в формате ключ:значение 
+		используя Object.entries и for...of
 
-console.log( checkNumberType(46) ); // 'Even'
+	const user = {
+	name: "Mango",
+	age: 20,
+	hobby: "html",
+	premium: true
+	};
 
-console.log( checkNumberType(3) ); // 'Odd'
-
-console.log( checkNumberType(17) ); // 'Odd'
 							 </pre>
 				</section>
 			</div>

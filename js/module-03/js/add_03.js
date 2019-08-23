@@ -10,7 +10,7 @@
   PS: слова могут быть в произвольном регистре
 */
 
-/*
+/* Альтернативный вариант
 function checkForSpam(str) {
   return str.toLowerCase().includes('spam') || str.toLowerCase().includes('sale');
 }

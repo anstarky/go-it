@@ -29,9 +29,11 @@
     addLogin добавляет или не добавляет логин в массив. При этом для проверок условия добавления использует результаты вызовов других функций - isLoginUnique и isLoginValid.
 */
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];
-let message;
+const MIN_LENGTH_PASSWORD = 4;
+const MAX_LENGTH_PASSWORD = 16;
+let message = '';
 
-const isLoginValid = login => ((login.length > 3) && (login.length < 17));
+const isLoginValid = login => ((login.length >= MIN_LENGTH_PASSWORD) && (login.length <= MAX_LENGTH_PASSWORD));
 const isLoginUnique = (allLogins, login) => !logins.includes(login);
 
 const addLogin = function (allLogins, login) {
