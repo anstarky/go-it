@@ -48,6 +48,23 @@ const addLogin = function (allLogins, login) {
   return console.log(message);
 };
 
+/* Альтернативный вариант
+
+const addLogin = function (allLogins, login) {
+  const valid = isLoginValid(login);
+
+  if (!valid) return 'Ошибка! Логин должен быть от 4 до 16 символов';
+
+  const unique = isLoginUnique(allLogins, login);
+
+  if (!unique) return 'Такой логин уже используется!';
+
+  logins.push(login);
+  return 'Логин успешно добавлен!';
+};
+
+*/
+
 // Вызовы функции для проверки
 addLogin(logins, 'Ajax'); // 'Логин успешно добавлен!'
 addLogin(logins, 'robotGoogles'); // 'Такой логин уже используется!'

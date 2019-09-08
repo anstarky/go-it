@@ -1,3 +1,4 @@
+/* eslint-disable func-names */
 /*
   Напиши функцию getAllPropValues(arr, prop),
   которая получает массив объектов и имя ключа.
@@ -21,6 +22,7 @@ const users = [{
   mood: 'tired',
 },
 ];
+/* Вариант 1:
 
 const getAllPropValues = function (arr, prop) {
   const NewArr = [];
@@ -38,6 +40,19 @@ const getAllPropValues = function (arr, prop) {
 
   return NewArr;
 };
+*/
+
+const getAllPropValues = function (arr, prop) {
+  const res = [];
+
+  for (let i = 0; i < arr.length; i += 1) {
+    if (prop in arr[i]) {
+      res.push(arr[i][prop]);
+    }
+  }
+  return res;
+};
+
 
 // Вызовы функции для проверки
 console.log(
