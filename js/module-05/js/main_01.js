@@ -9,8 +9,8 @@ const Notepad = function Notepad(notes = []) {
     // Перенеси свойства и методы объекта notepad в конструктор
     this.notes = notes;
     this.getNotes = function () {
-        // console.log(this.notes);
-        return this.notes;
+        const resultNotes = [...this.notes];
+        return resultNotes;
     };
 
     this.findNoteById = function (id) {
@@ -96,6 +96,7 @@ const notepad = new Notepad(initialNotes);
 /*
  * Смотрю что у меня в заметках после инициализации
  */
+
 console.log('Все текущие заметки после инициализации: ', notepad.getNotes());
 
 /*
