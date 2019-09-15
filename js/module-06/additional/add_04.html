@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 06 - Дополнительное задание 4</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../css/style-add.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 4</h2>
+					<pre>
+		                <code class="text">
+
+	/*
+	* Добавь к классу Car из предыдущего задания статический
+	* метод getSpecs, который принимает объект-машину как параметр
+	* и выводит в консоль значения полей maxSpeed, speed, running и distance.
+	*/
+
+	const car = new Car({ maxSpeed: 100 });
+	car.turnOn();
+	car.accelerate(50);
+	car.drive(2);
+
+	Car.getSpecs(car); // maxSpeed: 100, speed: 50, running: true, distance: 100
+
+						</code>
+					</pre>
+				</section>
+			</div>
+		</main>
+		<script src="../js/add_04.js"></script>
+	</body>
+</html>

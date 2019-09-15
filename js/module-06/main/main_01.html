@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 06 - Задание 1</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../css/style-main.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 1</h2>
+					<p>
+						За основу возьми домашнее задание из
+						<strong
+							><a
+								href="http://fecore.net.ua/books/javascript/module-05/homework.html"
+								>модуля №5</a
+							></strong
+						>
+						, но теперь необходимо написать ES6 класс.
+					</p>
+					<pre><code>
+<span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Notepad</span> </span>{
+	<span class="hljs-comment">/*
+	* Перенеси свойства и методы конструктора в класс
+	*
+	* Замени метод getNotes геттером, чтобы можно было обратиться как notepad.notes,
+	* для этого создай свойство _notes, в котором храни массив заметок,
+	* а геттер notes возвращает значение этого поля
+	*
+	* Добавь статическое свойство Priority используя ключевое слово static
+	*/</span>
+}
+					</code></pre>
+					<p>
+						Далее идет код для проверки работоспособности класса и
+						созданного экземпляра, вставь его в конец скрипта. Твоя
+						реализация класса <code>Notepad</code> должна проходить
+						этот тест.
+					</p>
+					<pre><code>
+<span class="hljs-keyword">const</span> initialNotes = [
+	{
+	id: <span class="hljs-string">'id-1'</span>,
+	title: <span class="hljs-string">'JavaScript essentials'</span>,
+	body:
+		<span class="hljs-string">'Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc'</span>,
+	priority: Notepad.Priority.HIGH,
+	},
+	{
+	id: <span class="hljs-string">'id-2'</span>,
+	title: <span class="hljs-string">'Refresh HTML and CSS'</span>,
+	body:
+		<span class="hljs-string">'Need to refresh HTML and CSS concepts, after learning some JavaScript. Maybe get to know CSS Grid and PostCSS, they seem to be trending.'</span>,
+	priority: Notepad.Priority.NORMAL,
+	},
+];
+
+<span class="hljs-keyword">const</span> notepad = <span class="hljs-keyword">new</span> Notepad(initialNotes);
+
+<span class="hljs-comment">/*
+	Смотрю что у меня в заметках после инициализации
+*/</span>
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Все текущие заметки: '</span>, notepad.notes);
+
+<span class="hljs-comment">/*
+	* Добавляю еще 2 заметки и смотрю что получилось
+	*/</span>
+notepad.saveNote({
+	id: <span class="hljs-string">'id-3'</span>,
+	title: <span class="hljs-string">'Get comfy with Frontend frameworks'</span>,
+	body:
+	<span class="hljs-string">'First must get some general knowledge about frameworks, then maybe try each one for a week or so. Need to choose between React, Vue and Angular, by reading articles and watching videos.'</span>,
+	priority: Notepad.Priority.NORMAL,
+});
+
+notepad.saveNote({
+	id: <span class="hljs-string">'id-4'</span>,
+	title: <span class="hljs-string">'Winter clothes'</span>,
+	body:
+	<span class="hljs-string">"Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I'll be able to do some excercises in the park."</span>,
+	priority: Notepad.Priority.LOW,
+});
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Все текущие заметки: '</span>, notepad.notes);
+
+<span class="hljs-comment">/*
+	* Зима уже близко, пора поднять приоритет на покупку одежды
+	*/</span>
+notepad.updateNotePriority(<span class="hljs-string">'id-4'</span>, Notepad.Priority.NORMAL);
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Заметки после обновления приоритета для id-4: '</span>, notepad.notes);
+
+<span class="hljs-comment">/*
+	* Решил что фреймворки отложу немного, понижаю приоритет
+	*/</span>
+notepad.updateNotePriority(<span class="hljs-string">'id-3'</span>, Notepad.Priority.LOW);
+
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Заметки после обновления приоритета для id-3: '</span>, notepad.notes);
+
+<span class="hljs-comment">/*
+	* Решил отфильтровать заметки по слову html
+	*/</span>
+<span class="hljs-built_in">console</span>.log(
+	<span class="hljs-string">'Отфильтровали заметки по ключевому слову "html": '</span>,
+	notepad.filterNotesByQuery(<span class="hljs-string">'html'</span>),
+);
+
+<span class="hljs-comment">/*
+	* Решил отфильтровать заметки по слову javascript
+	*/</span>
+<span class="hljs-built_in">console</span>.log(
+	<span class="hljs-string">'Отфильтровали заметки по ключевому слову "javascript": '</span>,
+	notepad.filterNotesByQuery(<span class="hljs-string">'javascript'</span>),
+);
+
+<span class="hljs-comment">/*
+	* Хочу посмотреть только заметки с нормальным приоритетом
+	*/</span>
+<span class="hljs-built_in">console</span>.log(
+	<span class="hljs-string">'Отфильтровали заметки по нормальному приоритету: '</span>,
+	notepad.filterNotesByPriority(Notepad.Priority.NORMAL),
+);
+
+<span class="hljs-comment">/*
+	* Обновим контент заметки с id-3
+	*/</span>
+notepad.updateNoteContent(<span class="hljs-string">'id-3'</span>, {
+	title: <span class="hljs-string">'Get comfy with React.js or Vue.js'</span>,
+});
+
+<span class="hljs-built_in">console</span>.log(
+	<span class="hljs-string">'Заметки после обновления контента заметки с id-3: '</span>,
+	notepad.notes,
+);
+
+<span class="hljs-comment">/*
+	* Повторил HTML и CSS, удаляю запись c id-2
+	*/</span>
+notepad.deleteNote(<span class="hljs-string">'id-2'</span>);
+<span class="hljs-built_in">console</span>.log(<span class="hljs-string">'Заметки после удаления с id -2: '</span>, notepad.notes);
+					</code></pre>
+				</section>
+			</div>
+		</main>
+		<script src="../js/main_01.js"></script>
+	</body>
+</html>

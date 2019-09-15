@@ -19,7 +19,7 @@ body {
 
     background: url(../img/main-bg.jpg) top center no-repeat;
     background-size: cover;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .container {

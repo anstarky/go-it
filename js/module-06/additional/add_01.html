@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 06 - Дополнительное задание 1</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../css/style-add.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 1</h2>
+					<pre>
+                		<code class="text">
+
+	/*
+	Напиши функцию-конструктор Account, которая добавляет будущему
+	объекту поля login, email.
+
+	В prototype функции-конструктора добавь метод getInfo(),
+	который выводит в консоль значения полей login и email.
+
+	Обрати внимание, метод всего один, в поле prototype функции-конструктора, 
+	а использовать его смогут все экземпляры, по ссылке.
+
+	Создать несколько экземпляров с разными значениями свойств, вывесди их в консоль.
+	*/
+
+	const account = new Account('Mangozedog', 'mango@dog.woof');
+
+	console.log(Account.prototype.getInfo); // function
+	account.getInfo(); // Login: Mangozedog, Email: mango@dog.woof
+
+						</code>
+					</pre>
+				</section>
+			</div>
+		</main>
+		<script src="../js/add_01.js"></script>
+	</body>
+</html>
