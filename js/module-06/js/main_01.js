@@ -17,7 +17,6 @@ class Notepad {
     this._notes = notes;
   }
 
-  // Добавляем статическое свойство, в котором храним приоритеты.
   static get Priority() {
     return {
       LOW: 0,

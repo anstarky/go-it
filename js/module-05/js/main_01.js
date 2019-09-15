@@ -8,16 +8,16 @@
 const Notepad = function Notepad(notes = []) {
     // Перенеси свойства и методы объекта notepad в конструктор
     this.notes = notes;
-    this.getNotes = function () {
+    Notepad.prototype.getNotes = function () {
         const resultNotes = [...this.notes];
         return resultNotes;
     };
 
-    this.findNoteById = function (id) {
+    Notepad.prototype.findNoteById = function (id) {
         return this.notes.find(e => e.id === id);
     };
 
-    this.findIndexNoteById = function (id) {
+    Notepad.prototype.findIndexNoteById = function (id) {
         for (const index in this.notes) {
             if (this.notes[index].id === id) {
                 return index;
@@ -26,26 +26,26 @@ const Notepad = function Notepad(notes = []) {
         return -1;
     };
 
-    this.saveNote = function (note) {
+    Notepad.prototype.saveNote = function (note) {
         this.notes.push(note);
         return note;
     };
 
-    this.deleteNote = function (id) {
+    Notepad.prototype.deleteNote = function (id) {
         this.notes.splice(this.findIndexNoteById(id), 1);
     };
 
-    this.updateNoteContent = function (id, updatedContent) {
+    Notepad.prototype.updateNoteContent = function (id, updatedContent) {
         Object.assign(this.findNoteById(id), updatedContent);
         return this.notes;
     };
 
-    this.updateNotePriority = function (id, priority) {
+    Notepad.prototype.updateNotePriority = function (id, priority) {
         this.findNoteById(id).priority = priority;
         return this.notes;
     };
 
-    this.filterNotesByQuery = function (query) {
+    Notepad.prototype.filterNotesByQuery = function (query) {
         const newArray = [];
         for (let i = 0; i < notes.length; i += 1) {
             const titleLower = this.notes[i].title.toLowerCase();
@@ -57,7 +57,7 @@ const Notepad = function Notepad(notes = []) {
         return newArray;
     };
 
-    this.filterNotesByPriority = function (priority) {
+    Notepad.prototype.filterNotesByPriority = function (priority) {
         const newArr = [];
         for (const obj of this.notes) {
             if (obj.priority === priority) {
