@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 07 - Дополнительное задание 4</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../css/style-add.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 4</h2>
+					<pre>
+		                <code class="text">
+
+	/*
+	Напиши функию getActiveGuests(guests), принимающую массив объектов гостей.
+
+	Функция должна возвращать массив объектов гостей, значение поля isActive которых true.
+
+	PS: обязательно используй перебирающие методы массивов, никаких for!
+	*/
+
+	const guests = [
+	{ name: "Mango", age: 20, isActive: true },
+	{ name: "Poly", age: 18, isActive: false },
+	{ name: "Ajax", age: 30, isActive: true },
+	{ name: "Chelsey", age: 45, isActive: false }
+	];
+
+	// Вызовы функции для проверки
+	console.log(getActiveGuests(guests)); // массив из 2-х объектов Mango и Ajax
+
+						</code>
+					</pre>
+				</section>
+			</div>
+		</main>
+		<script src="../js/add_04.js"></script>
+	</body>
+</html>

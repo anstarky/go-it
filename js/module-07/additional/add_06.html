@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 07 - Дополнительное задание 6</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../css/style-add.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 6</h2>
+					<pre>
+                		<code class="text">
+
+	/*
+	Напишите функию findGuestById(guests, id), принимающую
+	guests - массив объектов гостей, id - идентификатор (число).
+
+	Функция должна возвращать объект гостя с совпадающим id.
+
+	PS: обязательно используй перебирающие методы массивов, никаких for!
+	*/
+
+	const guests = [
+	{ id: 1, name: 'Mango', age: 20 },
+	{ id: 2, name: 'Poly', age: 18 },
+	{ id: 3, name: 'Ajax', age: 30 },
+	{ id: 4, name: 'Chelsey', age: 45 }
+	];
+
+	// Вызовы функции для проверки
+	console.log(
+	getGuestById(guests, 3)
+	); // {id: 3, name: 'Ajax', age: 30}
+
+	console.log(
+	getGuestById(guests, 1)
+	); // {id: 1, name: 'Mango', age: 20}
+
+	console.log(
+	getGuestById(guests, 5)
+	); // undefined
+
+        				</code>
+            		</pre>
+				</section>
+			</div>
+		</main>
+		<script src="../js/add_06.js"></script>
+	</body>
+</html>

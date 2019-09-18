@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 07 - Задание 1</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../css/style-main.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 1</h2>
+					<p>Используя массив объектов пользователей <code>users</code> (дальше в задании), напиши функции которые с помощью перебирающих методов массивов (никаких <code>for</code>, <code>splice</code> и т. д.) выполняют следующие операции.</p>
+
+					<h3 id="задание-1">Задание 1</h2>
+					<p>Получить массив имен всех пользователей (поле <code>name</code>).</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getAllNames = users =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getAllNames(users));
+<span class="hljs-comment">// [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]</span>
+					</code></pre>
+
+					<h3 id="задание-2">Задание 2</h2>
+					<p>Получить массив объектов пользователей по цвету глаз (поле <code>eyeColor</code>).</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getUsersByEyeColor = (users, color) =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getUsersByEyeColor(users, <span class="hljs-string">'blue'</span>)); <span class="hljs-comment">// [объект Moore Hensley, объект Sharlene Bush, объект Carey Barr]</span>
+					</code></pre>
+
+					<h3 id="задание-3">Задание 3</h2>
+					<p>Получить массив имен пользователей по полу (поле <code>gender</code>).</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getUsersByGender = (users, gender) =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getUsersByGender(users, <span class="hljs-string">'male'</span>)); <span class="hljs-comment">// [ 'Moore Hensley', 'Ross Vazquez', 'Carey Barr', 'Blackburn Dotson' ]</span>
+					</code></pre>
+
+					<h3 id="задание-4">Задание 4</h2>
+					<p>Получить массив только неактивных пользователей (поле <code>isActive</code>).</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getInactiveUsers = users =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getInactiveUsers(users)); <span class="hljs-comment">// [объект Moore Hensley, объект Ross Vazquez, объект Blackburn Dotson]</span>
+					</code></pre>
+
+					<h3 id="задание-5">Задание 5</h2>
+					<p>Получить пользоваля (не массив) по <code>email</code> (поле <code>email</code>, он уникальный).</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getUserByEmail = (users, email) =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getUserByEmail(users, <span class="hljs-string">'shereeanthony@kog.com'</span>)); <span class="hljs-comment">// {объект пользователя Sheree Anthony}</span>
+<span class="hljs-built_in">console</span>.log(getUserByEmail(users, <span class="hljs-string">'elmahead@omatom.com'</span>)); <span class="hljs-comment">// {объект пользователя Elma Head}</span>
+					</code></pre>
+
+					<h3 id="задание-6">Задание 6</h2>
+					<p>Получить массив пользователей попадающих в возрастную категорию от <code>min</code> до <code>max</code> лет (поле <code>age</code>).</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getUsersWithAge = (users, min, max) =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getUsersWithAge(users, <span class="hljs-number">20</span>, <span class="hljs-number">30</span>)); <span class="hljs-comment">// [объект Ross Vazquez, объект Elma Head, объект Carey Barr]</span>
+
+<span class="hljs-built_in">console</span>.log(getUsersWithAge(users, <span class="hljs-number">30</span>, <span class="hljs-number">40</span>));
+<span class="hljs-comment">// [объект Moore Hensley, объект Sharlene Bush, объект Blackburn Dotson, объект Sheree Anthony]</span>
+					</code></pre>
+
+					<h3 id="задание-7">Задание 7</h2>
+					<p>Получить общую сумму баланса (поле <code>balance</code>) всех пользователей.</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getTotalBalance = users =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getTotalBalance(users)); <span class="hljs-comment">// 20916</span>
+					</code></pre>
+
+					<h3 id="задание-8">Задание 8</h2>
+					<p>Массив имен всех пользователей у которых есть друг с указанным именем.</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getUsersByFriend = (users, name) =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getUsersByFriend(users, <span class="hljs-string">'Briana Decker'</span>)); <span class="hljs-comment">// [ 'Sharlene Bush', 'Sheree Anthony' ]</span>
+<span class="hljs-built_in">console</span>.log(getUsersByFriend(users, <span class="hljs-string">'Goldie Gentry'</span>)); <span class="hljs-comment">// [ 'Elma Head', 'Sheree Anthony' ]</span>
+					</code></pre>
+
+					<h2 class="title">Дополнительное задание</h2>
+
+					<p>Получить массив всех умений всех пользователей (поле <code>skills</code>), при этом не должно быть повторяющихся умений и они должны быть отсортированы в алфавитном порядке</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getUniqueSkills = users =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getUniqueSkills(users));
+<span class="hljs-comment">// [ 'adipisicing', 'amet', 'anim', 'commodo', 'culpa', 'elit', 'ex', 'ipsum', 'irure', 'laborum', 'lorem', 'mollit', 'non', 'nostrud', 'nulla', 'proident', 'tempor', 'velit', 'veniam' ]</span>
+					</code></pre>
+
+					<p>Массив имен (поле <code>name</code>) людей, отсортированных в зависимости от количества их друзей (поле <code>friends</code>)</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> getNamesSortedByFriendsCount = users =&gt; {
+	<span class="hljs-comment">// твой код</span>
+};
+
+<span class="hljs-built_in">console</span>.log(getNamesSortedByFriendsCount(users));
+<span class="hljs-comment">// [ 'Moore Hensley', 'Sharlene Bush', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony', 'Ross Vazquez' ]</span>
+					</code></pre>
+
+					<h2>Исходные данные</h1>
+					<p>Массив всех пользователей для задания.</p>
+
+					<pre><code>
+<span class="hljs-keyword">const</span> users = [
+	{
+		id: <span class="hljs-string">'701b29c3-b35d-4cf1-a5f6-8b12b29a5081'</span>,
+		name: <span class="hljs-string">'Moore Hensley'</span>,
+		email: <span class="hljs-string">'moorehensley@indexia.com'</span>,
+		eyeColor: <span class="hljs-string">'blue'</span>,
+		friends: [<span class="hljs-string">'Sharron Pace'</span>],
+		isActive: <span class="hljs-literal">false</span>,
+		balance: <span class="hljs-number">2811</span>,
+		skills: [<span class="hljs-string">'ipsum'</span>, <span class="hljs-string">'lorem'</span>],
+		gender: <span class="hljs-string">'male'</span>,
+		age: <span class="hljs-number">37</span>,
+	},
+	{
+		id: <span class="hljs-string">'7a3cbd18-57a1-4534-8e12-1caad921bda1'</span>,
+		name: <span class="hljs-string">'Sharlene Bush'</span>,
+		email: <span class="hljs-string">'sharlenebush@tubesys.com'</span>,
+		eyeColor: <span class="hljs-string">'blue'</span>,
+		friends: [<span class="hljs-string">'Briana Decker'</span>, <span class="hljs-string">'Sharron Pace'</span>],
+		isActive: <span class="hljs-literal">true</span>,
+		balance: <span class="hljs-number">3821</span>,
+		skills: [<span class="hljs-string">'tempor'</span>, <span class="hljs-string">'mollit'</span>, <span class="hljs-string">'commodo'</span>, <span class="hljs-string">'veniam'</span>, <span class="hljs-string">'laborum'</span>],
+		gender: <span class="hljs-string">'female'</span>,
+		age: <span class="hljs-number">34</span>,
+	},
+	{
+		id: <span class="hljs-string">'88beb2f3-e4c2-49f3-a0a0-ecf957a95af3'</span>,
+		name: <span class="hljs-string">'Ross Vazquez'</span>,
+		email: <span class="hljs-string">'rossvazquez@xinware.com'</span>,
+		eyeColor: <span class="hljs-string">'green'</span>,
+		friends: [<span class="hljs-string">'Marilyn Mcintosh'</span>, <span class="hljs-string">'Padilla Garrison'</span>, <span class="hljs-string">'Naomi Buckner'</span>],
+		isActive: <span class="hljs-literal">false</span>,
+		balance: <span class="hljs-number">3793</span>,
+		skills: [<span class="hljs-string">'nulla'</span>, <span class="hljs-string">'anim'</span>, <span class="hljs-string">'proident'</span>, <span class="hljs-string">'ipsum'</span>, <span class="hljs-string">'elit'</span>],
+		gender: <span class="hljs-string">'male'</span>,
+		age: <span class="hljs-number">24</span>,
+	},
+	{
+		id: <span class="hljs-string">'249b6175-5c30-44c6-b154-f120923736f5'</span>,
+		name: <span class="hljs-string">'Elma Head'</span>,
+		email: <span class="hljs-string">'elmahead@omatom.com'</span>,
+		eyeColor: <span class="hljs-string">'green'</span>,
+		friends: [<span class="hljs-string">'Goldie Gentry'</span>, <span class="hljs-string">'Aisha Tran'</span>],
+		isActive: <span class="hljs-literal">true</span>,
+		balance: <span class="hljs-number">2278</span>,
+		skills: [<span class="hljs-string">'adipisicing'</span>, <span class="hljs-string">'irure'</span>, <span class="hljs-string">'velit'</span>],
+		gender: <span class="hljs-string">'female'</span>,
+		age: <span class="hljs-number">21</span>,
+	},
+	{
+		id: <span class="hljs-string">'334f8cb3-eb04-45e6-abf4-4935dd439b70'</span>,
+		name: <span class="hljs-string">'Carey Barr'</span>,
+		email: <span class="hljs-string">'careybarr@nurali.com'</span>,
+		eyeColor: <span class="hljs-string">'blue'</span>,
+		friends: [<span class="hljs-string">'Jordan Sampson'</span>, <span class="hljs-string">'Eddie Strong'</span>],
+		isActive: <span class="hljs-literal">true</span>,
+		balance: <span class="hljs-number">3951</span>,
+		skills: [<span class="hljs-string">'ex'</span>, <span class="hljs-string">'culpa'</span>, <span class="hljs-string">'nostrud'</span>],
+		gender: <span class="hljs-string">'male'</span>,
+		age: <span class="hljs-number">27</span>,
+	},
+	{
+		guid: <span class="hljs-string">'150b00fb-dd82-427d-9faf-2879ea87c695'</span>,
+		name: <span class="hljs-string">'Blackburn Dotson'</span>,
+		email: <span class="hljs-string">'blackburndotson@furnigeer.com'</span>,
+		eyeColor: <span class="hljs-string">'brown'</span>,
+		friends: [<span class="hljs-string">'Jacklyn Lucas'</span>, <span class="hljs-string">'Linda Chapman'</span>],
+		isActive: <span class="hljs-literal">false</span>,
+		balance: <span class="hljs-number">1498</span>,
+		skills: [<span class="hljs-string">'non'</span>, <span class="hljs-string">'amet'</span>, <span class="hljs-string">'ipsum'</span>],
+		gender: <span class="hljs-string">'male'</span>,
+		age: <span class="hljs-number">38</span>,
+	},
+	{
+		id: <span class="hljs-string">'e1bf46ab-7168-491e-925e-f01e21394812'</span>,
+		name: <span class="hljs-string">'Sheree Anthony'</span>,
+		email: <span class="hljs-string">'shereeanthony@kog.com'</span>,
+		eyeColor: <span class="hljs-string">'brown'</span>,
+		friends: [<span class="hljs-string">'Goldie Gentry'</span>, <span class="hljs-string">'Briana Decker'</span>],
+		isActive: <span class="hljs-literal">true</span>,
+		balance: <span class="hljs-number">2764</span>,
+		skills: [<span class="hljs-string">'lorem'</span>, <span class="hljs-string">'veniam'</span>, <span class="hljs-string">'culpa'</span>],
+		gender: <span class="hljs-string">'female'</span>,
+		age: <span class="hljs-number">39</span>,
+	},
+];
+					</code></pre>
+				</section>
+			</div>
+		</main>
+		<script src="../js/main_01.js"></script>
+	</body>
+</html>
