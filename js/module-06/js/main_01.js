@@ -4,14 +4,14 @@
 
 class Notepad {
   /*
-     * Перенеси свойства и методы конструктора в класс
-     *
-     * Замени метод getNotes геттером, чтобы можно было обратиться как notepad.notes,
-     * для этого создай свойство _notes, в котором храни массив заметок,
-     * а геттер notes возвращает значение этого поля
-     *
-     * Добавь статическое свойство Priority используя ключевое слово static
-     */
+	 * Перенеси свойства и методы конструктора в класс
+	 *
+	 * Замени метод getNotes геттером, чтобы можно было обратиться как notepad.notes,
+	 * для этого создай свойство _notes, в котором храни массив заметок,
+	 * а геттер notes возвращает значение этого поля
+	 *
+	 * Добавь статическое свойство Priority используя ключевое слово static
+	 */
 
   constructor(notes = []) {
     this._notes = notes;
@@ -35,12 +35,16 @@ class Notepad {
   }
 
   findIndexNoteById(id) {
-    for (const index in this._notes) {
-      if (this._notes[index].id === id) {
-        return index;
-      }
-    }
-    return -1;
+    return this._notes.findIndex(e => e.id === id);
+
+    /* Альтернативный вариант:
+        for (const index in this._notes) {
+          if (this._notes[index].id === id) {
+            return index;
+          }
+        }
+        return -1;
+    */
   }
 
   saveNote(note) {
@@ -88,18 +92,21 @@ class Notepad {
 
 // Далее идет код для проверки работоспособности класса и созданного экземпляра, вставь его в конец скрипта.Твоя реализация класса Notepad должна проходить этот тест.
 
-const initialNotes = [{
-  id: 'id-1',
-  title: 'JavaScript essentials',
-  body: 'Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc',
-  priority: Notepad.Priority.HIGH,
-},
-{
-  id: 'id-2',
-  title: 'Refresh HTML and CSS',
-  body: 'Need to refresh HTML and CSS concepts, after learning some JavaScript. Maybe get to know CSS Grid and PostCSS, they seem to be trending.',
-  priority: Notepad.Priority.NORMAL,
-},
+const initialNotes = [
+  {
+    id: 'id-1',
+    title: 'JavaScript essentials',
+    body:
+			'Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc',
+    priority: Notepad.Priority.HIGH,
+  },
+  {
+    id: 'id-2',
+    title: 'Refresh HTML and CSS',
+    body:
+			'Need to refresh HTML and CSS concepts, after learning some JavaScript. Maybe get to know CSS Grid and PostCSS, they seem to be trending.',
+    priority: Notepad.Priority.NORMAL,
+  },
 ];
 
 const notepad = new Notepad(initialNotes);
@@ -115,14 +122,16 @@ console.log('Все текущие заметки: ', notepad.notes);
 notepad.saveNote({
   id: 'id-3',
   title: 'Get comfy with Frontend frameworks',
-  body: 'First must get some general knowledge about frameworks, then maybe try each one for a week or so. Need to choose between React, Vue and Angular, by reading articles and watching videos.',
+  body:
+		'First must get some general knowledge about frameworks, then maybe try each one for a week or so. Need to choose between React, Vue and Angular, by reading articles and watching videos.',
   priority: Notepad.Priority.NORMAL,
 });
 
 notepad.saveNote({
   id: 'id-4',
   title: 'Winter clothes',
-  body: "Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I'll be able to do some excercises in the park.",
+  body:
+		"Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I'll be able to do some excercises in the park.",
   priority: Notepad.Priority.LOW,
 });
 
@@ -173,10 +182,7 @@ notepad.updateNoteContent('id-3', {
   title: 'Get comfy with React.js or Vue.js',
 });
 
-console.log(
-  'Заметки после обновления контента заметки с id-3: ',
-  notepad.notes,
-);
+console.log('Заметки после обновления контента заметки с id-3: ', notepad.notes);
 
 /*
  * Повторил HTML и CSS, удаляю запись c id-2

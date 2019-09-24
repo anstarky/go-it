@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 08 - Задание 1</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../css/style-main.css" />
+		<link rel="stylesheet" href="../css/style_main_01.css">
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 1</h2>
+					<p>Пришло время начать создавать интерфейс для нашего приложения заметок, начнем с динамического создания коллекции заметок. Хорошая новость - верстка уже готова, тебе необходимо только написать JS-код. 🎉</p>
+					<p>Используй заготовку проекта из <a href="https://github.com/goitacademy/notepad-boilerplate/tree/homework-08" target="_blank" rel="noopener">этой ветки репозитория</a>, обязательно прочитай инструкцию.</p>
+
+					<ul>
+						<li>Перенеси свой класс <code>Notepad</code>, сделай экземпляр передав ему начальные заметки и используй геттер для получения всех заметок.</li>
+						<li>Напиши функцию <code>createListItem(note)</code> для создания одного элемента списка <code>ul.note-list</code> c карточкой заметки. Создавай DOM-узлы с помощью <code>document.createElement</code>.</li>
+						<li>Напиши функцию <code>renderNoteList(listRef, notes)</code>, которая получает ссылку на DOM-узел списка <code>ul.note-list</code> и массив объектов заметок, вызывает <code>createListItem(note)</code> столько раз, сколько объектов в массиве, после чего добавляет все карточки в список.</li>
+					</ul>
+
+					<p>Элемент списка имеет следующий вид.</p>
+
+					<ul>
+						<li>Используй карты имен иконок и действий заметки для подстановки констант.</li>
+						<li>Обрати внимание на data-атрибут <code>data-id</code> у элемента списка, туда записывай идентификатор заметки, это понадобится в следующих работах.</li>
+					</ul>
+
+					<p>Разметка элемента списка довольно большая, поэтому есть смысл не писать все в одной функции <code>createListItem</code> (будет простыня кода), а вынести создание отдельных частей карточки и просто вызывать их в <code>createListItem</code>, к примеру:</p>
+
+					<ul>
+						<li>Для <code>div.note__content</code> можно написать функцию <code>createNoteContent</code>.</li>
+						<li>Для <code>footer.note__footer</code> можно написать функцию <code>createNoteFooter</code>.</li>
+						<li>Так как <code>button.action</code> повторяется много раз, можно написать функцию createActionButton.</li>
+					</ul>
+
+					<pre><code>
+<span class="hljs-tag">&lt;<span class="hljs-name">li</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note-list__item"</span> <span class="hljs-attr">data-id</span>=<span class="hljs-string">"тут id заметки"</span>&gt;</span>
+	<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note"</span>&gt;</span>
+		<span class="hljs-tag">&lt;<span class="hljs-name">div</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note__content"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">h2</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note__title"</span>&gt;</span>Lorem, ipsum dolor.<span class="hljs-tag">&lt;/<span class="hljs-name">h2</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">p</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note__body"</span>&gt;</span>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus
+				libero atque, sint quas impedit est illum labore veniam aspernatur neque
+				nostrum aliquam dicta blanditiis. Esse porro impedit ratione soluta
+				amet?
+			<span class="hljs-tag">&lt;/<span class="hljs-name">p</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+
+		<span class="hljs-tag">&lt;<span class="hljs-name">footer</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note__footer"</span>&gt;</span>
+			<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note__section"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action"</span> <span class="hljs-attr">data-action</span>=<span class="hljs-string">"decrease-priority"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"material-icons action__icon"</span>&gt;</span>expand_more<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+				<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action"</span> <span class="hljs-attr">data-action</span>=<span class="hljs-string">"increase-priority"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"material-icons action__icon"</span>&gt;</span>expand_less<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+
+				<span class="hljs-tag">&lt;<span class="hljs-name">span</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note__priority"</span>&gt;</span>Priority: Low<span class="hljs-tag">&lt;/<span class="hljs-name">span</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+
+			<span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"note__section"</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action"</span> <span class="hljs-attr">data-action</span>=<span class="hljs-string">"edit-note"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"material-icons action__icon"</span>&gt;</span>edit<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+				<span class="hljs-tag">&lt;<span class="hljs-name">button</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"action"</span> <span class="hljs-attr">data-action</span>=<span class="hljs-string">"delete-note"</span>&gt;</span>
+					<span class="hljs-tag">&lt;<span class="hljs-name">i</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"material-icons action__icon"</span>&gt;</span>delete<span class="hljs-tag">&lt;/<span class="hljs-name">i</span>&gt;</span>
+				<span class="hljs-tag">&lt;/<span class="hljs-name">button</span>&gt;</span>
+			<span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
+		<span class="hljs-tag">&lt;/<span class="hljs-name">footer</span>&gt;</span>
+	<span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span>
+<span class="hljs-tag">&lt;/<span class="hljs-name">li</span>&gt;</span>
+					</code></pre>
+					<a class="task__btn" href="./main_01/index.html">Перейти к работе</a>
+				</section>
+			</div>
+		</main>
+		<script src="../js/main_01/const.js"></script>
+		<script src="../js/main_01/db.js"></script>
+		<script src="../js/main_01/Notepad.js"></script>
+		<script src="../js/main_01/view/createListItem.js"></script>
+		<script src="../js/main_01/view/renderNoteList.js"></script>
+		<script src="../js/main_01/main_01.js"></script>
+	</body>
+</html>

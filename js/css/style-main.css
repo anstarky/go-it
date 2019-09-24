@@ -141,4 +141,23 @@ pre {
     color: #8e908c;
 }
 
+.hljs-tag {
+    color: #c82829;
+}
+
+.task__btn {
+    display: block;
+    text-align: center;
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 15px 24px;
+}
+
+.task__btn:hover {
+    background-color: darkgreen;
+    color: white;
+    text-decoration: none;
+}
+
 /* --- END: CSS Code --- */

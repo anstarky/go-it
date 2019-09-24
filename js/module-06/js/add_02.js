@@ -35,6 +35,13 @@ class StringBuilder {
   pad(str) {
     this._value = str + this._value + str;
   }
+
+  /* Альтернативный вариант последнего метода:
+  pad(str) {
+    this.append(str);
+    this.prepend(str);
+  }
+  */
 }
 
 const builder = new StringBuilder('.');

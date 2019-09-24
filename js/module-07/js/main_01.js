@@ -97,6 +97,10 @@ const users = [{
 
 const getAllNames = users => users.map(user => user.name);
 
+/* Альтернативный вариант:
+  const getAllNames = users => users.map(({name}) => name);
+*/
+
 console.log(getAllNames(users));
 // [ 'Moore Hensley', 'Sharlene Bush', 'Ross Vazquez', 'Elma Head', 'Carey Barr', 'Blackburn Dotson', 'Sheree Anthony' ]
 
@@ -147,6 +151,10 @@ console.log(getUserByEmail(users, 'elmahead@omatom.com'));
 
 const getUsersWithAge = (users, min, max) => users.filter(user => (user.age >= min) && (user.age <= max));
 
+/* Альтернативный варинт:
+  const getUsersWithAge = (users, min, max) => users.filter(user => ({age}) >= min && age <= max);
+*/
+
 console.log(getUsersWithAge(users, 20, 30));
 // [объект Ross Vazquez, объект Elma Head, объект Carey Barr]
 
@@ -158,6 +166,10 @@ console.log(getUsersWithAge(users, 30, 40));
 /* Получить общую сумму баланса (поле balance) всех пользователей. */
 
 const getTotalBalance = users => users.reduce((accum, user) => accum += user.balance, 0);
+
+/* Альтернативный вариант:
+  const getTotalBalance = users => users.reduce((acc, {balance}) => (acc + balance), 0);
+*/
 
 console.log(getTotalBalance(users)); // 20916
 
