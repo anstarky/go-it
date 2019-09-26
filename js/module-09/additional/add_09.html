@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 09 - Дополнительное задание 9</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../../css/style-add.css" />
+		<link rel="stylesheet" href="../css/add_09.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 9</h2>
+					<pre>
+                		<code class="text">
+
+	/*
+	На вкладках HTML и CSS уже готовая верстка модального окна.
+	По умолчанию модальное окно скрыто классом modal-hidden.
+
+	Напишите скрипт который реализует следующее поведение:
+
+	- При клике на кнопке с надписью "Open Modal", модальное окно с классом modal, 
+		должно появляться. Для этого необходимо убрать класс modal-hidden. 
+		Для выбора модального модального окна используйте класс js-modal-backdrop
+
+	- При открытом модальном окне, клик на кнопку с крестиком (data-action="close-modal")
+		или на серый фон с прозрачностью (js-modal-backdrop), модальное окно должно закрываться.
+	*/
+
+						</code>
+					</pre>
+				</section>
+
+				<section class="task">
+					<div class="body">
+						<button class="btn" data-action="open-modal">
+							Open Modal
+						</button>
+
+						<div class="modal modal-hidden js-modal-backdrop">
+							<div class="modal-content">
+								<div
+									class="close-btn"
+									data-action="close-modal"
+								></div>
+								<h2 class="modal-title">Newsletter</h2>
+								<p class="modal-text">
+									Subscribe to the Bachas mailing list to
+									receive updates on new arrivals, special
+									offers and other discount information.
+								</p>
+								<form class="sub-form" action="#">
+									<input
+										class="sub-form-input"
+										type="text"
+										placeholder="Your Email Here"
+									/>
+									<button class="sub-form-btn">
+										subscribe
+									</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</main>
+		<script src="../js/add_09.js"></script>
+	</body>
+</html>
