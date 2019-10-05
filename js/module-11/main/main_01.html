@@ -4,139 +4,45 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Модуль 08 - Задание 1</title>
-		<link
-			rel="stylesheet"
-			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
-			crossorigin="anonymous"
-		/>
+		<title>Модуль 11 - Задание 1</title>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 		<link rel="stylesheet" href="../../css/style-main.css" />
-		<link rel="stylesheet" href="../css/style_main_01.css" />
 	</head>
 	<body>
 		<main>
 			<div class="container">
 				<section class="task">
 					<h2 class="title">Задание 1</h2>
-					<h1 id="домашнее-задание">1. Домашнее задание</h1>
 					<p>
-						Продолжаем добавлять функционал в интерфейс
-						<code>Notepad</code>. Используй свою домашнюю работу
-						номер <code>8</code> с уже работающей отрисовкой списка
-						и реализуй следующий функционал.
+						Пришло время добавить плагины модального окна, оповещений и шаблонизацию.
+					</p>
+					<p>
+						Разметка проекта немного изменилась, из-за того что форма добавления заметки теперь будет жить в диалоговом окне и появляться по необходимости. Поэтому возьми обновленный HTML и CSS из
+						<a href="https://github.com/goitacademy/notepad-boilerplate/tree/homework-11" target="_blank" rel="noopener">этой ветки репозитория</a>, обязательно прочитай инструкцию.
 					</p>
 					<p>
 						В
-						<a
-							href="https://drive.google.com/open?id=1kAdYHBhvxb-p4QlHOhmepPcFixoJRDXo"
-							target="_blank"
-							rel="noopener"
-							>этом видео</a
-						>
-						можно посмотреть как должен вести себя интерфейс после
-						добавления функционала описанного ниже.
+						<a href="https://drive.google.com/open?id=131trvTX88Z36Z63i8Mx-mlhPKmLbovXv" target="_blank" rel="noopener">этом видео</a>
+						можно посмотреть как должен вести себя интерфейс.
 					</p>
-					<h1 id="добавление-заметки">2. Добавление заметки</h1>
+					<p>Тебе необходимо добавить следующий функционал:</p>
 					<ul>
 						<li>
-							При сабмите формы <code>form.note-editor</code> в
-							массив заметок экземпляра класса
-							<code>Notepad</code> должен добавляться новый
-							объект, свойства <code>title</code> и
-							<code>body</code> которого вводит пользователь в
-							поля формы.
+							Разметку заметки сделай внешним шаблоном, используй шаблонизатор
+							<a href="https://handlebarsjs.com/" target="_blank" rel="noopener">handlebars</a>
 						</li>
 						<li>
-							Значение приоритета устанавливается в методе класса
-							и изначально должно быть самым низким.
+							При клике по
+							<code>button[data-action="open-editor"]</code>
+							показывается модальное окно с редактором заметок. Разметка уже готова, используй плагин модального окна
+							<a href="https://micromodal.now.sh/" target="_blank" rel="noopener">micromodal</a>.
 						</li>
 						<li>
-							Идентификатор объекта пока что создаем сами, для
-							этого вызывай вспомогательную функцию
-							<code>generateUniqueId</code> написанную ниже, она
-							вернет уникальную строку при каждом вызове.
+							При попытке отправить незаполненную форму заметки, замени некрасивый <code>alert</code> на плагин оповещений. Так же пусть оповещения всплывают при удачном добавлении или удалении заметки. Используй плагин
+							<a href="https://github.com/caroso1222/notyf#notyf" target="_blank" rel="noopener">notyf</a>
 						</li>
 					</ul>
-
-					<pre><code>
-<span class="hljs-keyword">const</span> generateUniqueId = () =&gt;
-<span class="hljs-built_in">Math</span>.random()
-.toString(<span class="hljs-number">36</span>)
-.substring(<span class="hljs-number">2</span>, <span class="hljs-number">15</span>) +
-<span class="hljs-built_in">Math</span>.random()
-.toString(<span class="hljs-number">36</span>)
-.substring(<span class="hljs-number">2</span>, <span class="hljs-number">15</span>);
-					</code></pre>
-
-					<p>Во время сабмита формы:</p>
-					<ul>
-						<li>
-							Если хотя бы один из инпутов пустой, выводи
-							<code>alert</code> с текстом
-							<code>'Необходимо заполнить все поля!'</code> и
-							больше ничего не делай, то есть заметка не
-							добавляется.
-						</li>
-						<li>
-							Если все поля заполнены, выполняй шаги описанные
-							дальше, но при этом еще очисти поля формы.
-						</li>
-					</ul>
-					<p>
-						После того как произошел сабмит формы и в массив
-						объектов была добавлена новая заметка, в
-						<code>ul.note-list</code> должен добавляться новый
-						элемент с карточкой заметки.
-					</p>
-					<p>
-						Функции для добавления объекта в массив и создания
-						элемента списка у тебя уже есть. При этом рендерить весь
-						список заново нет смысла, напиши функцию
-						<code>addListItem(listRef, note)</code>, которая
-						использует функцию создания элемента списка
-						<code>createListItem(note)</code>, и добавлят этот
-						элемент в конец списка
-						<code>ul.note-list</code> (параметр
-						<code>listRef</code>).
-					</p>
-					<h1 id="удаление-заметки">3. Удаление заметки</h1>
-					<p>
-						Следующий шаг это сделать удаление заметки по клику на
-						кнопке с иконкой корзины, то есть с
-						<code>data-action=delete-note</code>. Используй паттерн
-						делегированя событий для отслеживания клика на списке
-						<code>ul.note-list</code> и проверяй куда кликнули,
-						доступ к объекту события у тебя есть.
-					</p>
-					<p>
-						Узнать какой именно элемент необходимо удалить довольно
-						просто, у каждого элемента списка есть data-атрибут
-						<code>data-id</code> в котором указан идентификатор
-						объекта заметки, метод для удаления элемента из массива
-						объектов у тебя уже есть.
-					</p>
-					<p>
-						Для того чтобы получить ссылку на DOM-узел элемента
-						списка и удалить его в интерфейсе, используй методы
-						<code>el.closest()</code> и <code>el.remove()</code>.
-						Напиши функцию <code>removeListItem()</code> которая
-						скроет в себе реализацию удаления.
-					</p>
-					<h1 id="фильтрация-заметок">4. Фильтрация заметок</h1>
-					<p>
-						Последним шагом будет фильтрация по подстроке. Каждый
-						раз когда в инпут формы
-						<code>form.search-form</code> что-то вводится,
-						необходимо фильтровать массив заметок. Метод фильтрации
-						массива у тебя уже есть. После того как произведена
-						фильтрация массива, отрисуй отфильтрованные заметки
-						функцию <code>renderNoteList</code> (просто рисуй заново
-						список тех что подошли).
-					</p>
-					<a class="task__btn" href="./main_01/index.html"
-						>Перейти к работе</a
-					>
+					<a class="task__btn" href="./main_01/dist/index.html">Перейти к работе</a>
 				</section>
 			</div>
 		</main>

@@ -1,6 +1,8 @@
-import '../sass/main.scss';
+import './sass/main.scss';
+
 import products from './js/products';
 import productTemplate from './tamplates/products.hbs';
+
 
 const refProduct = document.querySelector('.products');
 

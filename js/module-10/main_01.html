@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Модуль 10 - Задание 1</title>
+		<link
+			rel="stylesheet"
+			href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+			integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="../css/style-main.css" />
+	</head>
+	<body>
+		<main>
+			<div class="container">
+				<section class="task">
+					<h2 class="title">Задание 1</h2>
+					<p>
+						Сегодня ты будешь тренироваться писать модульный код,
+						приготовься к рефакторингу - это очень полезный процесс,
+						который позволит взглянуть на свой код со стороны и
+						увидеть что можно улучшить.
+					</p>
+					<p>
+						Используй заготовку проекта из
+						<a
+							href="https://github.com/goitacademy/notepad-boilerplate/tree/homework-10"
+							target="_blank"
+							rel="noopener"
+							>этой ветки репозитория</a
+						>, обязательно прочитай инструкцию.
+						<code>Webpack</code> уже настроен, тебе осталось
+						поставить все зависимости и запустить сборку.
+					</p>
+					<p>
+						Перенеси JS-код 9-го домашнего задания в эту заготовку и
+						сделай его модульным. Как минимум:
+					</p>
+					<ul>
+						<li>
+							Вынеси функции отрисовки интерфейса в отдельный
+							модуль <code>view.js</code>.
+						</li>
+						<li>
+							Вынеси класс <code>Notepad</code> в отдельный модуль
+							<code>notepad-model.js</code>.
+						</li>
+						<li>
+							Добавь пакет
+							<a
+								href="https://www.npmjs.com/package/shortid"
+								target="_blank"
+								rel="noopener"
+								>shortid</a
+							>
+							для генерации уникальных идентификаторов. Теперь
+							функция <code>generateUniqueId</code> не нужна, ее
+							можно удалить.
+						</li>
+						<li>
+							Добавь главный модуль <code>app.js</code>, в котором
+							используй модули <code>constants.js</code>,
+							<code>view.js</code> и
+							<code>notepad-model.js</code>. Импортируй его в
+							<code>index.js</code>.
+						</li>
+					</ul>
+					<a class="task__btn" href="./main/dist/index.html"
+						>Перейти к работе</a
+					>
+				</section>
+			</div>
+		</main>
+	</body>
+</html>

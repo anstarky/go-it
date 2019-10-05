@@ -1,11 +1,14 @@
-import '../sass/main.scss';
-import products from './js/products';
-import productTemplate from './tamplates/products.hbs';
+import './sass/main.scss';
 
-const refProduct = document.querySelector('.products');
+import posts from './js/posts';
+import postTemplate from './tamplates/posts.hbs';
 
-const createProductListItemsMarkup = (products) => products.map(product => productTemplate(product)).join('');
+console.log(posts);
 
-const markup = createProductListItemsMarkup(products);
+const refPost = document.querySelector('.posts');
 
-refProduct.insertAdjacentHTML('beforeend', markup);
+const createPostListItemsMarkup = (posts) => posts.map(book => postTemplate(book)).join('');
+
+const markup = createPostListItemsMarkup(posts);
+
+refPost.insertAdjacentHTML('beforeend', markup);
