@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
-		<title>Модуль 12 - Задание 1</title>
+		<title>Модуль 13 - Задание 1</title>
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
 		<link rel="stylesheet" href="../../css/style-main.css" />
 	</head>
@@ -13,25 +13,44 @@
 			<div class="container">
 				<section class="task">
 					<h2 class="title">Задание 1</h2>
-					<p>В этом задании ты тренируешься использовать <code>localStorage</code> и <code>Promise</code>. Добавь в приложение <code>Notepad</code> следующий функционал:</p>
+					<p>Пришло время настроить коммуникацию между фронтендом и бекендом, самую важную часть любого современного приложения. Бекенд отвечает за хранение данных, клиент запрашивает данные и отрисовывает интерфейс. Вся работа с данными проходит через сервер и никак иначе: чтение, создание, удаление, обновление.</p>
 					<ul>
-						<li>При добавлении или удалении заметки, весь массив заметок сохраняется в localStorage.</li>
-						<li>При посещении страницы, начальный список заметок заполняется из сохраненного в localStorage, если там есть сохраненные заметки.</li>
+					<li>Удали код отвечающий за сохранение заметок в <code>localStorage</code>, больше тебе это не понадобится.</li>
+					<li>Добавь в проект пакет <a href="https://www.npmjs.com/package/json-server" target="_blank" rel="noopener">json-server</a>, скрипт для запуска сервера в <code>package.json</code> и используй данные ниже для <code>db.json</code>. Бекенд локальный, для разработки как раз то что надо.</li>
+					<li>Создай файл <code>src/services/api.js</code> в котором напиши функции для HTTP-запросов на бекенд. Используй эти функции в методах класса <code>Notepad</code>.</li>
 					</ul>
-					<p>Сделай так, чтобы методы класса <code>Notepad</code> возвращали промис, к примеру метод <code>saveNote</code>, <code>deleteNote</code> и другие, от которых зависит отрисовка интерфейса. Чтобы потом использовать методы класса следующим образом:</p>
+					<p>Стартовый <code>db.json</code> с одним ресурсом - <code>/notes</code>.</p>
 					<pre><code>
-notepad
-	.saveNote({ title: <span class="hljs-string">'Моя заметка'</span>, body: <span class="hljs-string">'Тело заметки'</span> })
-	.then(savedNote =&gt; {
-	<span class="hljs-comment">/*
-		* savedNote - заметка которая была сохранена в модели,
-		* с добавленным id и другими полями
-		*
-		* Далее код отрисовки интерфейса с уже сохраненной заметкой
-		*/</span>
-	});
+{
+	<span class="hljs-string">"notes"</span>: [
+	{
+		<span class="hljs-string">"id"</span>: <span class="hljs-string">"XWaQXcbk0"</span>,
+		<span class="hljs-string">"title"</span>: <span class="hljs-string">"JavaScript essentials"</span>,
+		<span class="hljs-string">"body"</span>: <span class="hljs-string">"Get comfortable with all basic JavaScript concepts: variables, loops, arrays, branching, objects, functions, scopes, prototypes etc"</span>,
+		<span class="hljs-string">"priority"</span>: <span class="hljs-number">0</span>
+	},
+	{
+		<span class="hljs-string">"id"</span>: <span class="hljs-string">"pkXzyRp1P"</span>,
+		<span class="hljs-string">"title"</span>: <span class="hljs-string">"Refresh HTML and CSS"</span>,
+		<span class="hljs-string">"body"</span>: <span class="hljs-string">"Need to refresh HTML and CSS concepts, after learning some JavaScript. Maybe get to know CSS Grid and PostCSS, they seem to be trending."</span>,
+		<span class="hljs-string">"priority"</span>: <span class="hljs-number">1</span>
+	},
+	{
+		<span class="hljs-string">"id"</span>: <span class="hljs-string">"QMom9q4Ku"</span>,
+		<span class="hljs-string">"title"</span>: <span class="hljs-string">"Get comfy with Frontend frameworks"</span>,
+		<span class="hljs-string">"body"</span>: <span class="hljs-string">"First must get some general knowledge about frameworks, then maybe try each one for a week or so. Need to choose between React, Vue and Angular, by reading articles and watching videos."</span>,
+		<span class="hljs-string">"priority"</span>: <span class="hljs-number">1</span>
+	},
+	{
+		<span class="hljs-string">"id"</span>: <span class="hljs-string">"k2k0UrjZG"</span>,
+		<span class="hljs-string">"title"</span>: <span class="hljs-string">"Winter clothes"</span>,
+		<span class="hljs-string">"body"</span>: <span class="hljs-string">"Winter is coming! Need some really warm clothes: shoes, sweater, hat, jacket, scarf etc. Maybe should get a set of sportwear as well so I'll be able to do some excercises in the park."</span>,
+		<span class="hljs-string">"priority"</span>: <span class="hljs-number">2</span>
+	}
+	]
+}
 					</code></pre>
-					<a class="task__btn" href="./main_01/dist/index.html">Перейти к работе</a>
+					<a class="task__btn" href="./main_01/client/dist/index.html">Перейти к работе</a>
 				</section>
 			</div>
 		</main>
