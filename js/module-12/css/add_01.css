@@ -1,0 +1,15 @@
+.theme-manager {
+    padding: 50px;
+}
+
+
+
+.theme-light {
+    background-color: #fff;
+    color: #212121;
+}
+
+.theme-dark {
+    background-color: #212121;
+    color: #fff;
+}
